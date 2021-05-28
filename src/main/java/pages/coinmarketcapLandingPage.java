@@ -4,14 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-
-import java.math.BigInteger;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -108,53 +101,7 @@ public class coinmarketcapLandingPage {
 		driver.findElement(showResult).click();
 	}
 
-//	public void applyFilter(String button) throws InterruptedException {
-//		assertTrue(driver.findElement(filterButton).isDisplayed());
-//		Thread.sleep(1000);
-//		WebElement element = driver.findElement(filterButton);
-//		JavascriptExecutor executor = (JavascriptExecutor)driver;
-//		executor.executeScript("arguments[0].click();", element);
-//		driver.findElement(addFilter).click();
-//		WebElement element1 = driver.findElement(subFilterMarketCap);
-//		JavascriptExecutor executor1 = (JavascriptExecutor)driver;
-//		executor1.executeScript("arguments[0].click();", element1);
-//		driver.findElement(subFilterCapRange).click();
-//		driver.findElement(applyFilter).click();
-//		WebElement element2 = driver.findElement(subFilterPrice);
-//		JavascriptExecutor executor2 = (JavascriptExecutor)driver;
-//		executor1.executeScript("arguments[0].click();", element2);
-//		driver.findElement(subFilterPriceRange).click();
-//		driver.findElement(applyFilter).click();
-//
-//		driver.findElement(showResult).click();
-//		List<WebElement> headers = driver.findElements(tableHeaders);
-//		for(int i=1; i<=headers.size();i++){
-//			String hValue = null;
-//			hValue = driver.findElement(By.xpath("//thead//tr/th[" + i + "]")).getText();
-//			if(hValue.equalsIgnoreCase("Price")){
-//				List<WebElement> prices = driver.findElements(pricesList);
-//				for (int j=1;j<=prices.size();j++){
-//					String pValue = driver.findElement(By.xpath("//tbody/tr[" + j + "]/td[" + i + "]")).getText().replace("$","");
-//					Double price = Double.parseDouble(pValue);
-//					System.out.println("Price : "+price);
-//					assertTrue(price>=101 && price<=1000);
-//				}
-//			} else if(hValue.equalsIgnoreCase("Market Cap")){
-//				List<WebElement> prices = driver.findElements(pricesList);
-//				Long maxMarketCap = 10000000000L;
-//				Long minMarketCap = 1000000000L;
-//				for (int j=1;j<=prices.size();j++){
-//					String mValue = driver.findElement(By.xpath("//tbody/tr[" + j + "]/td[" + i + "]")).getText().replace("$","").replaceAll(",","");
-//					Long marketCap = Long.parseLong(mValue);
-//					assertTrue(marketCap>=minMarketCap && marketCap<=maxMarketCap);
-//					System.out.println("Market Cap : "+marketCap);
-//				}
-//			}
-//		}
-//	}
-	
 	public void validateRows(String expectedRows) throws InterruptedException {
-//		Thread.sleep(5000);
 		List<WebElement> actualNumberOfRows = driver.findElements(tableRows);
 		System.out.println("Total number of rows dispalys is: "+actualNumberOfRows.size());
 		assertEquals(expectedRows,String.valueOf(actualNumberOfRows.size()));

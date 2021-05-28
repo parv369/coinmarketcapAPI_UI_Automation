@@ -1,25 +1,25 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "f8bfbdf1-e331-4e88-be1f-dcd7d896a81a",
+    "id": "1c73ab0e-556c-47ee-ba81-4d6824a9a200",
     "feature": "This feature file contains coinmarketcap website functional test scenarios",
-    "scenario": "Validate rows filter functionality",
-    "start": 1622201331440,
+    "scenario": "Validate filter functionality",
+    "start": 1622203096697,
     "group": 1,
     "content": "",
     "tags": "@coinmarketcapfeaturetest,@coinmarketcap,",
-    "end": 1622201347907,
+    "end": 1622203125983,
     "className": "passed"
   },
   {
-    "id": "53e29520-28fb-4766-931c-78b2f46e6ea5",
+    "id": "7fafb00f-df25-425e-9750-13ddce003dcd",
     "feature": "This feature file contains coinmarketcap website functional test scenarios",
-    "scenario": "Validate filter functionality",
-    "start": 1622201347939,
+    "scenario": "Validate rows filter functionality",
+    "start": 1622203078642,
     "group": 1,
     "content": "",
     "tags": "@coinmarketcapfeaturetest,@coinmarketcap,",
-    "end": 1622201377720,
+    "end": 1622203096683,
     "className": "passed"
   }
 ]);

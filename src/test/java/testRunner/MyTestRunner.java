@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/java/features/"},
         glue = {"stepdefinitions", "hooks"},
-        tags = "@coinmarketcap",
+        tags = "@coinmarketcapFeatureTest",
         plugin = {"pretty",
                 "timeline: test-output-thread",
                 "rerun: target/failedrerun.txt"

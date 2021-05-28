@@ -29,14 +29,12 @@ public class ApplicationHooks {
 
 
 	@Before("@coinmarketcap")
-//@Before(order=0)
 	public void getProperty() {
 		configReader = new ConfigReader();
 		prop = configReader.init_Prop();
 	}
 	
 	@Before("@coinmarketcap")
-//@Before(order=1)
 	public void launchBrowser() {
 		String browserName = prop.getProperty("browser");
 		String siteURL = prop.getProperty("url");

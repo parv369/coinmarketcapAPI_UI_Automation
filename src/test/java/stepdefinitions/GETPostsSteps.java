@@ -1,13 +1,10 @@
 package stepdefinitions;
 
-//import cucumber.api.java.en.Given;
-
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.hu.Ha;
 import io.restassured.response.Response;
 import org.json.simple.parser.ParseException;
 import utilities.RestAssuredExtension;
@@ -25,12 +22,12 @@ public class GETPostsSteps {
     private RestAssuredExtension restAssuredExtension = new RestAssuredExtension();
 
     @Given("I invoke the endpoint {string} to get the bitcoin IDs")
-    public void i_perform_get_operation_for(String url) throws URISyntaxException {
+    public void i_perform_get_operation_for_bitcoin_IDs(String url) throws URISyntaxException {
         response = restAssuredExtension.GetIDs(url,null);
     }
 
     @Given("I invoke the Ethereum technical documentation website endpoint {string}")
-    public void Ethereum(String url, DataTable data) throws URISyntaxException {
+    public void invoke_Ethereumtechnical_documentation_website(String url, DataTable data) throws URISyntaxException {
         Map<String, String> quaryParams = new HashMap<String, String>();
         quaryParams.put(data.cell(0,0),data.cell(0,1));
         response = restAssuredExtension.GetIDs(url,quaryParams);
@@ -78,7 +75,7 @@ public class GETPostsSteps {
     }
 
     @Then("I should get the list of IDs for bitcoin and tether and Ethereum currencies")
-    public void i_perform_get_operation_for() throws URISyntaxException, ParseException {
+    public void i_perform_get_operation_for_IDs() throws URISyntaxException, ParseException {
          currencyIds = restAssuredExtension.responseAssertion(response);
     }
 

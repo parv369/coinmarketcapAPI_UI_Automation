@@ -65,9 +65,6 @@ public class RestAssuredExtension {
         for (Map.Entry<String, Long> ccyConversion: ccyConversionList.entrySet()){
             System.out.println("Currency: "+ ccyConversion.getKey()+ " has Bolivian Boliviano price as: " +ccyConversion.getValue());
         }
-
-
-//        System.out.println("Currency converted to "+response.jsonPath().get("data.quote.2832.price"));
     }
 
     public static void responseCurrencyAssertion(Response response) throws ParseException {

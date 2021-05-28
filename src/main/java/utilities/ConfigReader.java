@@ -1,6 +1,5 @@
 package utilities;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
@@ -18,7 +17,6 @@ public class ConfigReader {
 	{
 		prop = new Properties();
 		try {
-			//FileInputStream fis = new FileInputStream("/Users/parakhta/Desktop/RestAsured/src/test/resources/config/config.properties");
 			prop.load(ConfigReader.class.getClassLoader().getResourceAsStream("config.properties"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
